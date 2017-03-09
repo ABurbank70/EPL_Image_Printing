@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #
 #	NOTE: the image (cat_mono.pcx) needs to be a monochrome PCX file!  
-#   Reduce color depth to '2' (GRAYSCALE is too many colors)
+# Reduce color depth to '2' (GRAYSCALE is too many colors)
 
 use strict;
 use warnings;
