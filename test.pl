@@ -33,6 +33,6 @@ print $fh $image;
 #   From command line (assuming ZEBRA_PRINTER is installed
 #   on your workstation as a RAW print device) or look into
 #   the Printer module in CPAN to print from your code.
-#~$ lp -d ZEBRA_PRINTER EPL2_document.txt
+#~$ lp -d ZEBRA_PRINTER EPL2_document.lp
 
 
