@@ -19,10 +19,14 @@ my $filename = "EPL2_document.lp";
 $GW_x = 50;
 $GW_y = 120;
 my $picture = GW_create("cat_mono.pcx");
-my $lf = "\x0A";										      # EPL requires LF only (not CR/LF)
-my $image = "N${lf}ZT${lf}";							# New label, start from TOP
-$image .=  "A60,40,0,4,1,1,N,\"cat_mono.pcx\"${lf}";	# Write text
-$image .= "${picture}${lf}P1${lf}";						# Draw image with binary data in $picture
+# EPL requires LF only (not CR/LF)
+my $lf = "\x0A";			
+# New label, start from TOP
+my $image = "N${lf}ZT${lf}";			
+# Write text
+$image .=  "A60,40,0,4,1,1,N,\"cat_mono.pcx\"${lf}";	
+# Draw image with binary data in $picture
+$image .= "${picture}${lf}P1${lf}";						
 open my $fh, ">", $filename or die "$filename: $!\n";	
 print $fh $image;
 
